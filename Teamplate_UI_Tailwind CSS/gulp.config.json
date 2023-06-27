@@ -1,0 +1,37 @@
+{
+  "appName": "Hope UI",
+  "output" : "dist",
+  "mini": "false",
+  "dark": "false",
+  "layout" : "layouts/dashboard/default",
+  "assets": {
+      "fonts": [
+          "./src/assets/fonts/**/*.*"
+      ],
+      "style": [
+        "./node_modules/apexcharts/dist/apexcharts.css",
+        "./node_modules/swiper/swiper-bundle.min.css",
+        "./src/assets/vendor/Leaflet/leaflet.css",
+        "./node_modules/flatpickr/dist/flatpickr.min.css"
+        
+        
+      ],
+      "js": {
+          "core": [
+                "./node_modules/@popperjs/core/dist/umd/popper.min.js",
+                "./node_modules/waypoints/lib/noframework.waypoints.min.js",
+                "./node_modules/apexcharts/dist/apexcharts.min.js",
+                "./node_modules/swiper/swiper-bundle.min.js"
+                
+          ],
+          "external": [
+                "./node_modules/smooth-scrollbar/dist/smooth-scrollbar.js",
+                "./{directory}/assets/js/plugins/slider-tabs.js",
+                "./{directory}/assets/js/plugins/circle-progress.js",
+                "./node_modules/counterup2/dist/index.js",
+                "./src/assets/vendor/Leaflet/leaflet.js",
+                "./node_modules/flatpickr/dist/flatpickr.min.js"
+            ]
+      }
+  }
+}

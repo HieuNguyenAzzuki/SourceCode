@@ -1,0 +1,431 @@
+{{#extend layout title="form-elements" active="form-elements" path="../../" }}
+{{#content "content"}}
+<div class="block lg:flex">
+
+    <div class="w-full lg:w-2/4 md:pr-4  rtl:ml-4">
+        <div class="flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+            <div class="p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">Basic Form</h4>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Email address:</label>
+                        <input type="email" class="w-full px-4 py-2 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Password:</label>
+                        <input type="password" class="w-full px-4 py-2 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                    </div>
+                    <div class="mb-4 pl-6">
+                        <input class="float-left w-4 h-4 mt-1 -ml-6 border border-blue-500 rounded" type="checkbox" id="flexCheckDefault4">
+                        <label class="text-gray-500" for="flexCheckDefault4">Remember me</label>
+                    </div>
+                    <button type="submit" class="inline-block px-6 py-2 text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                    <button type="submit" class="inline-block p-2 px-6 py-2 text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+            <div class="p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">Form Grid</h4>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="flex">
+                        <div class="pr-3 lg:w-2/4 w-1/2">
+                            <input type="text" class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="First name">
+                        </div>
+                        <div class="pl-3 lg:w-2/4 w-1/2">
+                            <input type="text" class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Last name">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+            <div class="p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">Input</h4>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Input Text </label>
+                        <input type="text" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="Mark Jhon" placeholder="Enter Name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Email Input</label>
+                        <input type="email" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="markjohn@gmail.com" placeholder="Enter Email">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Url Input</label>
+                        <input type="url" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="https://tailwindui.com" placeholder="Enter Url">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Telephone Input</label>
+                        <input type="tel" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="1-(555)-555-5555">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Number Input</label>
+                        <input type="number" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="2356">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Password Input</label>
+                        <input type="password" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="markjhon123" placeholder="Enter Password">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Date Input</label>
+                        <input type="date" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="2019-12-18">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Month Input</label>
+                        <input type="month" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="2019-12">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Week Input</label>
+                        <input type="week" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="2019-W46">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Time Input</label>
+                        <input type="time" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="13:45">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Date and Time Input</label>
+                        <input type="datetime-local" class="w-full px-4 py-2 text-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="2019-12-19T13:45:00">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Example textarea</label>
+                        <textarea class="w-full px-4 py-2 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="inline-block px-6 py-2 text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                    <button type="submit" class="inline-block px-6 py-2 text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+            <div class="p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">Input Size</h4>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Small</label>
+                        <input class="w-full px-4 py-1 placeholder-gray-500 text-sm border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" type="text" placeholder=".form-control-sm">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Default</label>
+                        <input class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" type="text" placeholder=".form-control">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Large</label>
+                        <input class="w-full px-4 py-4 placeholder-gray-500 text-xl border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" type="text" placeholder=".form-control-lg">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+            <div class="p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">Select Size</h4>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Small</label>
+                        <select class="w-full px-4 py-1 text-xs text-gray-500 bg-white border rounded-md outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                            <option class="text-xs" selected="">Open this select menu</option>
+                            <option class="text-xs" value="1">One</option>
+                            <option class="text-xs" value="2">Two</option>
+                            <option class="text-xs" value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Default</label>
+                        <select class="w-full px-4 py-2 text-gray-500 bg-white border rounded-md outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                            <option selected="">Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-xl text-gray-500">Large</label>
+                        <select class="w-full px-4 py-4 text-xl text-gray-500 bg-white border rounded-md outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                            <option class="text-xl" selected="">Open this select menu</option>
+                            <option class="text-xl" value="1">One</option>
+                            <option class="text-xl" value="2">Two</option>
+                            <option class="text-xl" value="3">Three</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--second col-->
+    <div class="w-full lg:w-2/4 lg:pl-4">
+        <div class="flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+            <div class="p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">Horizontal Form</h4>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <div class="flex items-center">
+                            <label class="w-1/4 px-2 mb-0 md:mr-0 mr-6">Email:</label>
+                            <input type="email" class="w-full px-4 py-2 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Enter Your email">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center">
+                            <label class="w-1/4 px-2 mb-0 md:mr-0 mr-4">Password:</label>
+                            <input type="password" class="w-full px-4 py-2 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Enter Your password">
+                        </div>
+                    </div>
+                    <div class="pl-6 mb-4">
+                        <input class="float-left w-4 h-4 mt-1 -ml-6 border border-blue-500 rounded" type="checkbox" id="horizontalcheckbox">
+                        <label class="text-gray-500" for="horizontalcheckbox">Remember me</label>
+                    </div>
+                    <div class="mb-4">
+                        <button type="submit" class="inline-block p-2 px-6 py-2 text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                        <button type="submit" class="inline-block p-2 px-6 py-2 text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+            <div class="p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">Form row</h4>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="flex">
+                        <div class="w-full pr-3 sm:mx-1 lg:w-2/4">
+                            <input type="text" class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="First name">
+                        </div>
+                        <div class="w-full pl-3 sm:mx-1 lg:w-2/4">
+                            <input type="text" class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Last name">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+            <div class="p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">Input</h4>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <label class="mb-2">Disabled input</label>
+                        <input type="text" class="w-full px-4 py-2 placeholder-gray-600 bg-gray-200 border rounded outline-none dark:bg-dark-card dark:border-gray-600" placeholder="Mark John" disabled>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                            venenatis mollis, diam nibh finibus leo</p>
+                        <div class="flex flex-wrap md:flex-nowrap items-center mb-4">
+                            <label class="px-2 mb-0 w-1/4">Email:</label>
+                            <input type="email" class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Enter Your email">
+                        </div>
+                        <div class="flex flex-wrap md:flex-nowrap items-center mb-4">
+                            <label class="px-2 mb-0 w-1/4">Password:</label>
+                            <input type="password" class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Enter Your password">
+                        </div>
+                        <div class="mb-4 pl-6">
+                            <input class="float-left w-4 h-4 mt-1 -ml-6 border border-blue-500 rounded" type="checkbox" id="inputcheckbox">
+                            <label class="text-gray-500" for="inputcheckbox">Remember me</label>
+                        </div>
+                        <div class="flex mb-4">
+                            <button type="submit" class="inline-block p-2 px-6 py-2 mr-0.5 text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                            <button type="submit" class="inline-block p-2 px-6 py-2 ml-0.5 text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">Cancel</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+        <div class="flex flex-auto p-6 pb-0">
+            <h4 class="text-2xl font-medium text-black dark:text-gray-500">Form row</h4>
+        </div>
+        <div class="p-6">
+            <div class="mb-4">
+                <label class="mb-2">Readonly</label>
+                <input type="text" class="w-full px-4 py-2 placeholder-gray-600 bg-gray-200 border rounded outline-none form-control focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Mark John" readonly>
+            </div>
+            <div class="mb-4">
+                <label class="mb-2">Input Color</label>
+                <input type="color" class="w-full px-4 py-1 bg-white border border-gray-300 rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" value="#50b5ff">
+            </div>
+            <div>
+                <div class="mb-4">
+                    <label class="mb-2" for="selectInput">Select Input</label>
+                    <select id="selectInput" class="block w-full px-4 py-2 text-gray-500 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                        <option selected="">Select your age</option>
+                        <option value="1">0-18</option>
+                        <option value="2">18-26</option>
+                        <option value="3">26-46</option>
+                        <option value="2">46-60</option>
+                        <option value="3">Above 60</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="mb-2" for="selectinput">Select Input New</label>
+                    <select id="selectinput" class="block w-full px-4 py-2 text-gray-500 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                        <option selected="">This is a placeholder</option>
+                        <option value="1">Choice 1</option>
+                        <option value="2">Choice 2</option>
+                        <option value="3">Choice 3</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="mb-2" for="disabledTextInput" class="form-label">Default</label>
+                    <select class="block w-full px-4 py-2 bg-white border rounded outline-none form-select focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600"
+                        data-trigger="" name="choices-multiple-default" id="choices-multiple-default" multiple="">
+                        <option value="Choice 1" selected="">Choice 1</option>
+                        <option value="Choice 2">Choice 2</option>
+                        <option value="Choice 3">Choice 3</option>
+                        <option value="Choice 4" disabled="">Choice 4</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="mb-2" for="exampleFormControlSelect2">Example multiple Select</label>
+                    <select class="block w-full px-4 py-2 bg-white border rounded outline-none form-select focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="exampleFormControlSelect2" multiple>
+                        <option>select-1</option>
+                        <option>select-2</option>
+                        <option>select-3</option>
+                        <option>select-4</option>
+                        <option>select-5</option>
+                        <option>select-6</option>
+                        <option>select-7</option>
+                        <option>select-8</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="mb-2">Range Input</label>
+                    <input id="range7" class="rounded-lg appearance-none bg-blue-100 h-1 w-full" type="range" min="1" max="100" step="1" value="50">
+                </div>
+                <div class="mb-0.5">
+                    <label class="customcheck6">
+                        <input class="m-1" type="checkbox" id="customcheck6">
+                        Default Checkbox
+                    </label>
+                </div>
+                <div class="mb-0.5">
+                    <label for="customCheck6">
+                        <input type="checkbox" class="m-1" id="customCheck6" checked>
+                        Checked Checkbox
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="checkbox" disabled>
+                    <label>Disabled Checkbox</label>
+                </div>
+
+                <div class="pl-1 mb-4">
+                    <input type="checkbox" checked disabled>
+                    <label>Disabled checked checkbox</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                      <input type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label for="flexRadioDefault1">Default radio </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                      <input type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label  for="flexRadioDefault2">Default checked radio</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="radio" disabled>
+                    <label>Disabled radio</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="radio" checked disabled>
+                    <label>Disabled checked radio</label>
+                </div>
+                <div class="pl-1 mb-4">
+                    <input type="radio" disabled checked>
+                    <label class="form-check-label" for="customRadio5"> Selected and disabled radio</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="radio" id="customRadio6" name="customRadio1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio6"> Default radio</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="checkbox" id="flexCheckDefault2">
+                    <label class="form-check-label" for="flexCheckDefault2">Default checkbox</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="checkbox" id="flexCheckChecked" checked>
+                    <label for="flexCheckChecked">Checked checkbox</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="checkbox">
+                    <label>Disabled checkbox</label>
+                </div>
+                <div class="pl-1 mb-4">
+                    <input type="checkbox" checked disabled>
+                    <label>Disabled checked checkbox</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="radio" id="flexRadioDefault2" checked>
+                    <label for="flexRadioDefault2">Selected radio</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="radio" disabled>
+                    <label>Disabled radio</label>
+                </div>
+                <div class="pl-1 mb-4">
+                    <input type="radio" disabled checked>
+                    <label>Selected and Disabled radio</label>
+                </div>
+                <div class="mb-0.5">
+                    <label class="flex items-center">
+                        <div class="relative mr-2">
+                            <input id="toogleButton" type="checkbox" class="hidden">
+                            <!-- path -->
+                            <div class="toggle-path bg-gray-200 w-9 h-5 rounded-full shadow-inner"></div>
+                            <!-- crcle -->
+                            <div class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0">
+                            </div>
+                        </div>
+                        Default switch checkbox input
+                    </label>
+                </div>
+                <div class="mb-4">
+                    <div class="mb-2"><label for="fileupload1">Choose file</label>
+                    </div>
+                    <input type="file" id="fileupload1" class="block choose w-full text-xl border text-gray-500 rounded outline-none focus:border-blue-400 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                </div>
+                <div class="mb-4">
+                    <label class="mb-2" for="fileupload2">Example file input</label>
+                    <input type="file" id="fileupload2" class="block choose w-full text-xl border text-gray-500 rounded outline-none focus:border-blue-400 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                </div>
+                <div class="mb-4">
+                    <label class="mb-2" for="fileupload3">Choose file</label>
+                    <input type="file" id="fileupload3" class="block choose w-full text-xl border text-gray-500 rounded outline-none focus:border-blue-400 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="inline-block p-2 px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                    <button type="submit" class="inline-block p-2 px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{{> partials/components/setting-button}}
+{{/content}}
+{{/extend}}

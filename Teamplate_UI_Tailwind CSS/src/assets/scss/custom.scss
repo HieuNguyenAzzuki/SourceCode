@@ -1,0 +1,424 @@
+
+.footer-inner{
+    min-height: calc(100vh - 6.6rem);
+}
+
+.credit-card-widget{
+     .card-header::before{
+         background: linear-gradient(225deg, #3a57e8 6%, #3a57e8 56%);
+         top: -45px;
+         left: -3.125rem;
+         content: "";
+         height: 300px;
+         width: 300px;
+         position: absolute;
+         border-radius: 50%;
+         z-index: -1;
+     }
+     .card-header::after{
+         background: linear-gradient(145deg, #079aa2 6%, #079aa2 56%);
+         bottom: -45px;
+         right: -3.125rem;
+         content: "";
+         height: 300px;
+         width: 300px;
+         position: absolute;
+         border-radius: 50%;
+         z-index: -1;
+     }
+     .card-header1::before{
+        background: linear-gradient(225deg, #3a57e8 6%, #3a57e8 56%);
+        top: -45px;
+        right: -3.125rem;
+        content: "";
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    .card-header1::after{
+        background: linear-gradient(145deg, #079aa2 6%, #079aa2 56%);
+        bottom: -45px;
+        left: -3.125rem;
+        content: "";
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+    }
+     .primary-gradient-card{
+         background: linear-gradient(117.76deg, rgba(255,255,255,0.5) -20.21%, rgba(255,255,255,0.01) 118.08%);
+         color: #fff;
+         backdrop-filter: blur(10px);
+     }
+    }
+
+.btn-soft-light{
+    background-color: rgba(222,226,230,0.2);
+    border-color: rgba(222,226,230,0);
+}
+
+.data-scrollbar{
+    max-height: 92vh;
+}
+
+// UI sheet-Forms
+::-webkit-file-upload-button{
+    color:#a0aec0;
+    background-color:white;
+    border:none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+    font-weight: 500; 
+  }
+
+  .choose{
+    background-color:white;
+    color: #a0aec0;
+    font-size: large;
+    font-weight: 400;
+}
+
+.choose::-webkit-file-upload-button{
+    background-color:white;
+    color: #a0aec0;
+    font-size: large;
+    font-weight: 400;
+    border-right:1px solid#f3f4f5;
+}
+
+.choose::-webkit-file-upload-button:hover{
+    background-color: #f3f4f5;
+}
+
+  #choose1{
+      background-color:white;
+      color: #a0aec0;
+      font-size: large;
+      font-weight: 400;
+  }
+
+  #choose1::-webkit-file-upload-button{
+      background-color:white;
+      color: #a0aec0;
+      font-size: large;
+      font-weight: 400;
+      border-right:1px solid#f3f4f5;
+  }
+
+  #choose1::-webkit-file-upload-button:hover{
+      background-color: #f3f4f5;
+  }
+
+  #choose2::-webkit-file-upload-button{
+    background-color:white;
+    color: #a0aec0;
+    font-size: large;
+    font-weight: 400;
+    border-right:1px solid#dd1a0c;
+}
+
+#choose2::-webkit-file-upload-button:hover{
+    background-color: #f3f4f5;
+}
+  
+
+//   UIsheet
+.is-valid{
+    @apply bg-no-repeat ;
+    background-position: right calc(.375em + .25rem) center;
+    background-size: 1.5rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%231aa053' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+.is-valid1{
+    @apply bg-no-repeat ;
+    background-position: right calc(.375em + 1.5rem) center;
+    background-size: 1.5rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%231aa053' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+.is-invalid{
+    @apply bg-no-repeat ;
+    background-position: right calc(.375em + .25rem) center;
+    background-size: 1.5rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23c03221'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23c03221' stroke='none'/%3e%3c/svg%3e");
+}
+.is-invalid1{
+    @apply bg-no-repeat ;
+    background-position: right calc(.375em + 1.5rem) center;
+    background-size: 1.5rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23c03221'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23c03221' stroke='none'/%3e%3c/svg%3e");
+}
+
+// all checkbox
+input[type="checkbox"]{
+    accent-color: blue;
+ }
+ 
+ input[type="radio"]{
+     accent-color: rgb(22, 167, 22);
+     block-size: 16px;
+     inline-size: 16px;
+  } 
+
+ #togglesection input[type="radio"]{
+    accent-color: blue;
+    block-size: 16px;
+    inline-size: 16px;
+ }
+
+  .section3 input[type="checkbox"]{
+    accent-color: rgb(22, 167, 22);
+ }
+
+
+//carousal
+.custom-swiper-slider{
+    .swiper-pagination-bullet{
+        height: 16px;
+        width:16px;
+        background: #fff;
+    }
+    .swiper-button-next{
+        color: rgb(187, 182, 182) ;
+    }
+    .swiper-button-prev{
+        color: rgb(187, 182, 182);
+    }
+    .swiper-slide{
+        width:100% !important;
+    }
+}
+
+/* Toggle A */
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: white;
+
+  }
+
+/* Toggle B */
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: white;
+
+  }
+  .scrollspy li.active > a {
+    color:#fff;
+    border-radius: 50px;
+  }
+  
+// Toggle range
+
+    // @media screen and (-webkit-min-device-pixel-ratio: 0) {
+     
+        #range1::-webkit-slider-thumb {
+            width: 15px;
+            -webkit-appearance: none;
+  			appearance: none;
+            height: 15px;
+            cursor: pointer;
+            background: #FFF;
+            box-shadow: -405px 0 0 400px blue;
+            border-radius: 50%;
+            
+        }
+
+        #range2::-webkit-slider-thumb {
+            width: 15px;
+            -webkit-appearance: none;
+  			appearance: none;
+            height: 15px;
+            cursor: pointer;
+            background: #FFF;
+            box-shadow: -405px 0 0 400px rgb(197, 197, 197);
+            border-radius: 50%;
+            
+        }
+
+        #range3::-webkit-slider-thumb {
+            width: 15px;
+            -webkit-appearance: none;
+  			appearance: none;
+            height: 15px;
+            cursor: pointer;
+            background: #FFF;
+            box-shadow: -405px 0 0 400px rgb(7, 160, 7);
+            border-radius: 50%;
+            
+        }
+
+        #range4::-webkit-slider-thumb {
+            width: 15px;
+            -webkit-appearance: none;
+  			appearance: none;
+            height: 15px;
+            cursor: pointer;
+            background: #FFF;
+            box-shadow: -405px 0 0 400px rgb(224, 0, 0);
+            border-radius: 50%;
+            
+        }
+
+        #range5::-webkit-slider-thumb {
+            width: 15px;
+            -webkit-appearance: none;
+  			appearance: none;
+            height: 15px;
+            cursor: pointer;
+            background: #FFF;
+            box-shadow: -405px 0 0 400px rgb(235, 152, 0);
+            border-radius: 50%;
+            
+        }
+
+        #range6::-webkit-slider-thumb {
+            width: 15px;
+            -webkit-appearance: none;
+  			appearance: none;
+            height: 15px;
+            cursor: pointer;
+            background: #FFF;
+            box-shadow: -405px 0 0 400px black;
+            border-radius: 50%;
+            
+        }  
+        #range7::-webkit-slider-thumb {
+            width: 15px;
+            -webkit-appearance: none;
+  			appearance: none;
+            height: 15px;
+            cursor: pointer;
+            background: #FFF;
+            border-radius: 50%;
+            border: 2px solid blue;
+            
+        }        
+    
+        // sidebar
+        .sidebar{
+            transition: 700ms;
+        }
+
+        .navbar{
+            transition: 700ms;
+        }
+        .dark{
+        .credit-card-widget{
+            .primary-gradient-card{
+                background:linear-gradient(117.76deg, rgba(000, 000, 000, 0.5) -7.21%, rgba(000, 000, 000, 0.01) 118.08%);
+            }
+        }
+    }
+
+    // setting panel rotation
+    @keyframes animScaleX {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.175);}
+        100% {transform: scale(1);}
+    }
+    @keyframes animScale {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.175);}
+        100% {transform: scale(1);}
+    }
+    @keyframes animRotate {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+    .animated-scaleX {
+        animation: animScale 45s 1s ease-in-out infinite;
+    }
+    .animated-scale {
+        animation: animScale 45s 1s ease-in-out infinite;
+    }
+    .animated-rotate {
+        animation: animRotate 8s 0s ease-in-out infinite;
+    }
+
+    // sidebar <hr>
+    hr:not([size]) {
+        height: 1px;
+    }
+    hr {
+        margin: 1rem 0;
+        color: inherit;
+        background-color: currentColor;
+        border: 0;
+        opacity: .25;
+    }
+
+    .hr-horizontal {
+        background: transparent;
+        margin: .5rem 0;
+        background-image: linear-gradient(90deg,transparent,rgba(0,0,0,0.4),transparent);
+    }
+    .hr-vertial {
+        width: 1px;
+        height: auto !important;
+        margin: .5rem 0;
+        background: transparent;
+        background-image: linear-gradient(180deg,transparent,rgba(0,0,0,0.4),transparent);
+    }
+
+    .dark{
+        hr:not([size]) {
+            height: 1px;
+        }
+        hr {
+            margin: 1rem 0;
+            color: inherit;
+            background-color: currentColor;
+            border: 0;
+            opacity: .25;
+        }
+    
+        .hr-horizontal {
+            background: transparent;
+            margin: .5rem 0;
+            background-image: linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
+        }
+        .hr-vertial {
+            width: 1px;
+            height: auto !important;
+            margin: .5rem 0;
+            background: transparent;
+            background-image: linear-gradient(180deg,transparent,rgba(255,255,255,0.4),transparent);
+        }  
+    }
+    // form validation page input type image
+    .image-upload>input {
+        display: none;
+      }
+    // intersection observer
+    .select{
+        background-color:#d8ddfa;
+        color:blue;
+        font-weight: 400;
+        border-radius:0.5rem;
+        padding:0.25rem 1rem;
+    }
+
+    // UI sheet toggle checkbox
+    .toggle-path {
+        transition: background 0.3s ease-in-out;
+    }
+    .toggle-circle {
+        top: 0.2rem;
+        left: 0.25rem;
+        transition: all 0.3s ease-in-out;
+    }
+    input:checked ~ .toggle-circle {
+        transform: translateX(100%);
+        border: 1px solid blue;
+    }
+    input:checked ~ .toggle-path {
+        background-color:#c4cdf8;
+    }
+   
+    
+    

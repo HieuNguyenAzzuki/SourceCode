@@ -1,0 +1,41 @@
+{{!-- layouts/layout.hbs --}}
+
+<!doctype html>
+<html lang="en" dir="{{#compare dir '==' 'true'}}rtl{{else}}ltr{{/compare}}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ appName }} | Responsive Tailwind Admin Dashboard Template</title>
+  {{> partials/dashboard/head }}
+  {{#block "head"}}
+  {{!-- External page head section--}}
+  {{/block}}
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WNGH9RL'); window.tag_manager_event = 'dashboard-free-preview'; window.tag_manager_product = 'HopeUI-tailwind';</script>
+</head>
+
+<body class="{{bodyClass}} overflow-x-hidden" data-bs-spy="scroll" data-bs-target="#elements-section" data-bs-offset="0"
+  tabindex="0">
+  <!-- loader Start -->
+  <div id="loading">
+    {{> partials/dashboard/loader }}
+  </div>
+  <!-- loader END -->
+  <div id="bg-body-wrapper" class="bg-body wrapper">
+    {{#block "content"}}
+
+    {{/block}}
+  </div>
+  {{> partials/dashboard/scripts }}
+  {{#block "scripts"}}
+  {{/block}}
+</body>
+
+</html>

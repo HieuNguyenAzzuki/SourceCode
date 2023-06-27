@@ -1,0 +1,194 @@
+{{#extend layout title="form-validation" active="form-wizard" path="../../" }}
+{{#content "content"}}
+
+<div class="mb-8 text-gray-500 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+    <div class="p-6 pb-0">
+        <h4 class="text-2xl font-medium text-black dark:text-gray-500">Simple Wizard</h4>
+    </div>
+    <div class="p-6" x-data="{ open: true, open1: false, open2: false, open3: false }">
+        <form class="mt-4">
+            <ul class="flex flex-wrap p-0 mb-14">
+                <li class="w-full lg:pr-4 rtl:pl-4 md:pr-4 mb-2 lg:w-1/4 md:w-1/2">
+                    <div x-bind:class="open1 || open2 || open3 ? 'bg-green-500 rounded-lg' : 'bg-blue-500 rounded-lg'">
+                        <div class="flex items-center p-4">
+                            <div class="p-3 mr-4 bg-white rounded-full text-blue-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <span class="text-white font-medium rtl:mr-2">Account</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="w-full lg:px-4 rtl:pl-4 md:pl-4 mb-2 lg:w-1/4 md:w-1/2">
+                    <div x-bind:class="open2 || open3 ? 'bg-green-500 rounded-lg' : 'bg-blue-100 rounded-lg'">
+                        <div class="flex items-center p-4" x-bind:class="open1 == true ?'bg-blue-500 rounded-lg text-white':''">
+                            <div class="p-3 mr-4 rounded-full bg-blue-500" x-bind:class="open1 == true || open2 || open3 ?' bg-white text-blue-500':''">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </div>
+                            <span class="font-medium rtl:mr-2" x-bind:class="open1 == true || open2 || open3 ?'text-white':'text-blue-500'">Personal</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="w-full lg:pr-4 rtl:pl-4 md:pr-4 mb-2 lg:w-1/4 md:w-1/2">
+                    <div x-bind:class="open3  ? 'bg-green-500 rounded-lg' : 'bg-blue-100 rounded-lg'">
+                        <div class="flex items-center p-4" x-bind:class="open2 == true ?'bg-blue-500 rounded-lg text-white':''">
+                            <div class="p-3 mr-4 rounded-full bg-blue-500" x-bind:class="open2 == true || open2 || open3 ?'stroke-blue-500 bg-white text-blue-500':''">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <span class="font-medium rtl:mr-2" x-bind:class="open2 == true || open3 ?'text-white':'text-blue-500'">Image</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="w-full lg:px-4 rtl:pl-4 md:pl-4 mb-2 lg:w-1/4 md:w-1/2">
+                    <div x-bind:class="open3  ? 'bg-green-500 rounded-lg' : 'bg-blue-100 rounded-lg'">
+                        <div class="flex items-center p-4">
+                            <div class="p-3 mr-4 rounded-full  bg-blue-500" x-bind:class="open3 == true ?'stroke-blue-500 bg-white text-blue-500':''">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span class="font-medium rtl:mr-2" x-bind:class="open3 == true ?'text-white':'text-blue-500'">Finish</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div x-bind:class="open ? '' : 'hidden'">
+                <div class="flex w-full mb-6">
+                    <div class="w-full">
+                        <h4 class="text-3xl font-medium text-black dark:text-gray-500">Account Information:</h4>
+                    </div>
+                    <div class="w-full flex justify-center">
+                        <h4 class="text-3xl font-medium px-4 text-black dark:text-gray-500">Step 1-4</h4>
+                    </div>
+                </div>
+                <div class="flex w-full md:flex-nowrap flex-wrap">
+                    <div class="w-full md:pr-4 pr-0">
+                        <form>
+                            <div class="mb-4 rtl:ml-4">
+                                <label class="inline-block mb-4 text-gray-600 ">Email: *</label>
+                                <input type="email" class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Email Id">
+                            </div>
+                            <div class="mb-4 rtl:ml-4">
+                                <label class="inline-block mb-4 text-gray-600 ">Password: *</label>
+                                <input type="password" class="block w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="w-full md:pl-4 pl-0">
+                        <form>
+                            <div class="mb-4 rtl:ml-4">
+                                <label class="inline-block mb-4 text-gray-600">Username: *</label>
+                                <input type="email" class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Username">
+                            </div>
+                            <div class="mb-4 rtl:ml-4">
+                                <label class="inline-block mb-4 text-gray-600">Confirm Password: *</label>
+                                <input type="password" class="w-full px-4 py-2 placeholder-gray-500 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Confirm Password">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex justify-end w-full">
+                    <div @click="if (open == true) open = false; open1 = true" class="inline-block p-2 px-6 py-2 text-center cursor-pointer text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-md hover:bg-blue-600 hover:text-white">
+                        Next</div>
+                </div>
+            </div>
+            <div x-bind:class="open1 ? '' : 'hidden'">
+                <div class="flex w-full mb-6">
+                    <div class="w-full">
+                        <h4 class="text-3xl font-medium text-black dark:text-gray-500">Personal Information:</h4>
+                    </div>
+                    <div class="w-full flex justify-center">
+                        <h4 class="text-3xl font-medium px-4 text-black dark:text-gray-500">Step 2-4</h4>
+                    </div>
+                </div>
+                <div class="flex w-full md:flex-nowrap flex-wrap">
+                    <div class="w-full md:pr-4 pr-0">
+                        <form>
+                            <div class="mb-4 rtl:ml-4">
+                                <label class="inline-block mb-4 text-gray-600">First Name: *</label>
+                                <input type="text" class="w-full px-4 py-2 placeholder-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="First Name">
+                            </div>
+                            <div class="mb-4 rtl:ml-4">
+                                <label class="inline-block mb-4 text-gray-600">Contact No.: *</label>
+                                <input type="number" class="w-full px-4 py-2 placeholder-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Contact No.">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="w-full md:pl-4 pl-0">
+                        <form>
+                            <div class="mb-4 rtl:ml-4">
+                                <label class="inline-block mb-4 text-gray-600">Last Name: *</label>
+                                <input type="text" class="w-full px-4 py-2 placeholder-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Last Name">
+                            </div>
+                            <div class="mb-4 rtl:ml-4">
+                                <label class="inline-block mb-4 text-gray-600">Alternate Contact No.: *</label>
+                                <input type="number" class="w-full px-4 py-2 placeholder-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" placeholder="Alternate Contact No.">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex justify-end w-full">
+                    <button @click="if (open1 == true) open1 = false; open = true" class="inline-block rtl:ml-4 p-2 px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-black border border-black mr-2 rounded shadow-md hover:text-white dark:bg-gray-600">Previous</button>
+                    <button @click="if (open1 == true) open2 = true; open1 = false" class="inline-block p-2 px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-md hover:bg-blue-600 hover:text-white">Next</button>
+                </div>
+            </div>
+            <div x-bind:class="open2 ? '' : 'hidden'">
+                <div class="flex w-full mb-6">
+                    <div class="w-full">
+                        <h4 class="text-3xl font-medium text-black dark:text-gray-500">Image Upload:</h4>
+                    </div>
+                    <div class="w-full flex justify-center">
+                        <h4 class="text-3xl font-medium px-5 text-black dark:text-gray-500">Step 3-4</h4>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="w-full">
+                        <form>
+                            <div class="mb-4">
+                                <label class="inline-block mb-4 text-gray-700">Upload Your Photo:</label>
+                                <input type="file" class="w-full placeholder-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                            </div>
+                            <div class="mb-4">
+                                <label class="inline-block mb-4 text-gray-700">Upload Signature Photo:</label>
+                                <input type="file" class="w-full placeholder-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="flex justify-end w-full">
+                    <button @click="if (open2 == true) open2 = false; open1 = true" class="inline-block rtl:ml-4 p-2 px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-black border border-black mr-2 rounded shadow-md hover:text-white dark:bg-gray-600">Previous</button>
+                    <button @click="if (open2 == true) open2 = false; open3 = true" class="inline-block p-2 px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-md hover:bg-blue-600 hover:text-white">Submit</button>
+                </div>
+            </div>
+            <div x-bind:class="open3 ? '' : 'hidden'">
+                <div class="flex mb-10 justify-between md:justify-evenly lg:justify-around">
+                    <h4 class="text-3xl font-medium text-black dark:text-gray-500">Finish:</h4>
+                    <h4 class="text-3xl font-medium text-black dark:text-gray-500">Step 4-4</h4>
+                </div>
+                <div class="flex flex-col justify-center w-full">
+                    <h2 class="text-3xl font-medium text-center text-green-500"><strong>SUCCESS !</strong></h2>
+                    <br>
+                    <div class="flex flex-wrap justify-center text-center">
+                        <img src="{{path}}assets/images/pages/img-success.png" class="h-12 md:h-32 lg:h-48 md:w-32 w-12 lg:w-48">
+                    </div>
+                    <br>
+                    <div class="flex justify-center text-center">
+                        <div class=" w-2/5 md:w-3/5">
+                            <h5 class="text-gray-600 font-semibold text-xl">You Have Successfully Signed Up</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{> partials/components/setting-button}}
+{{/content}}
+{{/extend}}

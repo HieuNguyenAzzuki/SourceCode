@@ -1,0 +1,139 @@
+{{#extend layout title="terms-of-use" active="term-of-use" path="../../" }}
+{{#content "content"}}
+<div class="flex flex-wrap">
+    <div class="w-full">
+        <div class="bg-white border border-gray-200" x-data="{selected:null}">
+                        <ul class="shadow-box">
+                          <li class="relative border border-b-0 bg-indigo-50">
+                            <button type="button" class="w-full p-6 text-left"
+                              @click="selected !== 1 ? selected = 1 : selected = null">
+                              <div class="flex items-center justify-between">
+                                <span>Lorem ipsum dolor sit</span>
+                                <span class="ico-plus"></span>
+                              </div>
+                            </button>
+                            <div class="relative overflow-hidden transition-all max-h-0 duration-700 bg-white" style=""
+                              x-ref="container1"
+                              x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                              <div class="p-6">
+                                <strong>Anim pariatur cliche reprehenderit,</strong>  enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, 
+                              </div>
+                            </div>
+                          </li>
+                          <li class="relative border border-b-0 bg-indigo-50 my-10">
+                            <button type="button" class="w-full p-6 text-left"
+                              @click="selected !== 2 ? selected = 2 : selected = null">
+                              <div class="flex items-center justify-between">
+                                <span>consectetur adipiscing elit</span>
+                                <span class="ico-plus"></span>
+                              </div>
+                            </button>
+                            <div class="relative overflow-hidden transition-all max-h-0 duration-700 bg-white" style=""
+                              x-ref="container2"
+                              x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+                              <div class="p-6">
+                                <strong>Anim pariatur cliche reprehenderit,</strong> enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,<span class="text-pink-500"> non cupidatat skateboard dolor brunch.</span> Food truck quinoa nesciunt laborum eiusmod
+                              </div>
+                            </div>
+                          </li>
+                          <li class="relative border border-b-0 bg-indigo-50">
+                            <button type="button" class="w-full p-6 text-left"
+                              @click="selected !== 3 ? selected = 3 : selected = null">
+                              <div class="flex items-center justify-between">
+                                <span>Etiam sit amet justo non</span>
+                                <span class="ico-plus"></span>
+                              </div>
+                            </button>
+                            <div class="relative overflow-hidden transition-all max-h-0 duration-700 bg-white" style=""
+                              x-ref="container3"
+                              x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+                              <div class="p-6">
+                                <strong>Anim pariatur cliche reprehenderit,</strong> enim eiusmod high life accusamus terry richardson ad squid.<span class="text-pink-500"> 3 wolf moon officia aute,</span> non cupidatat skateboard dolor brunch.
+                              </div>
+                            </div>
+                          </li>
+                            <li class="relative border border-b-0 bg-indigo-50 my-10">
+                            <button type="button" class="w-full p-6 text-left"
+                              @click="selected !== 4 ? selected = 4 : selected = null">
+                              <div class="flex items-center justify-between">
+                                <span>velit accumsan laoreet</span>
+                                <span class="ico-plus"></span>
+                              </div>
+                            </button>
+                            <div class="relative overflow-hidden transition-all max-h-0 duration-700 bg-white" style=""
+                              x-ref="container4"
+                              x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+                              <div class="p-6">
+                                <strong>Anim pariatur cliche reprehenderit,</strong> enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,<span class="text-pink-500"> non cupidatat skateboard dolor brunch.</span> Food truck quinoa nesciunt laborum eiusmod.
+                              </div>
+                            </div>
+                          </li>
+                          <li class="relative border border-b-0 bg-indigo-50">
+                            <button type="button" class="w-full p-6 text-left"
+                              @click="selected !== 5 ? selected = 5 : selected = null">
+                              <div class="flex items-center justify-between">
+                                <span>Donec volutpat metus in erat</span>
+                                <span class="ico-plus"></span>
+                              </div>
+                            </button>
+                            <div class="relative overflow-hidden transition-all max-h-0 duration-700 bg-white" style=""
+                              x-ref="container5"
+                              x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''">
+                              <div class="p-6">
+                                <strong>pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</strong> 3 wolf moon officia aute,<span class="text-pink-500"> non cupidatat skateboard dolor brunch.</span> Food truck quinoa nesciunt laborum eiusmod.
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+
+        {{!-- <div >
+            <div class="mb-8 rounded" x-data="{selected:null}">
+            <div class="border border-b-0 rounded-t bg-indigo-50 focus:bg-indigo-200 focus:border-indigo-400">
+                <button @click="selected !== 1 ? selected = 1 : selected = null" class="px-6 py-4 text-gray-600">
+                consectetur adipiscing elit
+                </button>
+            </div>
+                <div x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" class="px-6 py-4 relative overflow-hidden transition-all max-h-0 duration-700">
+                <strong>Anim pariatur cliche reprehenderit,</strong>  enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, 
+            </div>
+        </div>
+        <div x-data={ show:false } class="mb-8 rounded ">
+            <div class="border border-b-0 rounded-t bg-indigo-50 focus:bg-indigo-200 focus:border-indigo-400">
+                <button @click="show=!show" class="px-6 py-4 text-gray-600">
+                consectetur adipiscing elit
+                </button>
+            </div>
+                <div x-show="show" class="px-6 py-4 text-gray-600 border border-b-0 bg-indigo-50">
+                <strong>Anim pariatur cliche reprehenderit,</strong>  enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, 
+            </div>
+        </div>
+        <div x-data={ show:false } class="mb-8 rounded">
+            <div class="border border-b-0 rounded-t bg-indigo-50 focus:bg-indigo-200 focus:border-indigo-400">
+                <button @click="show=!show" class="px-6 py-4 text-gray-600">
+                consectetur adipiscing elit
+                </button>
+            </div>
+                <div x-show="show" class="px-6 py-4 text-gray-600 border border-b-0 bg-indigo-50">
+                <strong>Anim pariatur cliche reprehenderit,</strong>  enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, 
+            </div>
+        </div>
+        </div> --}}
+    </div>
+</div>
+{{/content}}
+{{/extend}}
+
+
+                               
+                            

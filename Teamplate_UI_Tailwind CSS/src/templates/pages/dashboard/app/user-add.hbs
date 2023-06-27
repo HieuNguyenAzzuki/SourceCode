@@ -1,0 +1,154 @@
+{{#extend layout title="user-add" active="user-add" path="../../" }}
+{{#content "content"}}
+<div class="block lg:flex">
+    <div class="w-full lg:w-1/4 lg:pr-4">
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-lg -mt-2 dark:bg-dark-card">
+            <div class="flex justify-between flex-auto p-6 pb-0">
+                <div class="header-title">
+                    <h4 class="text-2xl font-medium text-black dark:text-gray-500">Add New User</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <form>
+                    <div class="mb-4">
+                        <div class="relative">
+                            <img class="w-24 h-24 rounded-lg" src="{{path}}assets/images/avatars/01.png" alt="profile-pic">
+                            <div class="image-upload absolute cursor-pointer top-auto w-8 h-8 text-center bg-blue-500 border-4 border-white rounded-full left-16 -bottom-2">
+                                <label for="file-input">
+                                <svg class="inline-block pb-1 m-0.5" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="#ffffff" d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z"></path>
+                                </svg>
+                                </label>
+                                <input id="file-input" class="hidden file-upload" type="file" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="mt-4 ">
+                            <div class="items-center inline-block">
+                                <span>Only</span>
+                                <a href="javascript:void();" class="text-blue-400 hover:text-blue-500">.jpg</a>
+                                <a href="javascript:void();" class="text-blue-400 hover:text-blue-500">.png</a>
+                                <a href="javascript:void();" class="text-blue-400 hover:text-blue-500">.jpeg</a>
+                                <span>allowed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-slate-400">User Role:</label>
+                        <select name="type" class="block w-full px-4 py-2 text-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow selectpicker appearance-none dark:bg-dark-card dark:border-gray-600" data-style="py-0">
+                            <option>Select</option>
+                            <option>Web Designer</option>
+                            <option>Web Developer</option>
+                            <option>Tester</option>
+                            <option>Php Developer</option>
+                            <option>Ios Developer </option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-slate-400" for="furl">Facebook Url:</label>
+                        <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="furl" placeholder="Facebook Url">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-slate-400" for="turl">Twitter Url:</label>
+                        <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="turl" placeholder="Twitter Url">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-slate-400" for="instaurl">Instagram Url:</label>
+                        <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="instaurl" placeholder="Instagram Url">
+                    </div>
+                    <div class="mb-0 ">
+                        <label class="inline-block mb-2 text-slate-400" for="lurl">Linkedin Url:</label>
+                        <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="lurl" placeholder="Linkedin Url">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="flex-auto w-full lg:w-3/4 lg:pl-4 ">
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-lg -mt-2 dark:bg-dark-card">
+            <div class="flex justify-between flex-auto p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">New User Information</h4>
+            </div>
+            <div class="p-6 ">
+                <form>
+                    <div class="flex flex-wrap">
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pr-3">
+                            <label class="inline-block mb-2 text-slate-400" for="fname">First Name:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="fname" placeholder="First Name">
+                        </div>
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pl-3">
+                            <label class="inline-block mb-2 text-slate-400" for="lname">Last Name:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="lname" placeholder="Last Name">
+                        </div>
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pr-3">
+                            <label class="inline-block mb-2 text-slate-400" for="add1">Street Address 1:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="add1" placeholder="Street Address 1">
+                        </div>
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pl-3">
+                            <label class="inline-block mb-2 text-slate-400" for="add2">Street Address 2:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="add2" placeholder="Street Address 2">
+                        </div>
+                        <div class="mb-4 md:w-full md:flex-auto">
+                            <label class="inline-block mb-2 text-slate-400" for="cname">Company Name:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="cname" placeholder="Company Name">
+                        </div>
+                        <div class="w-full mb-4">
+                            <label class="inline-block mb-2 text-slate-400">Country:</label>
+                            <select name="type" class="block w-full px-4 py-2 text-gray-600 bg-white border rounded outline-none focus:border-blue-500 dark:bg-dark-card focus:shadow selectpicker appearance-none dark:border-gray-600" data-style="py-0">
+                                <option>Select Country</option>
+                                <option>Caneda</option>
+                                <option>Noida</option>
+                                <option>USA</option>
+                                <option>India</option>
+                                <option>Africa</option>
+                            </select>
+                        </div>
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pr-3">
+                            <label class="inline-block mb-2 text-slate-400" for="mobno">Mobile Number:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="mobno" placeholder="Mobile Number">
+                        </div>
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pl-3">
+                            <label class="inline-block mb-2 text-slate-400" for="altconno">Alternate Contact:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="altconno" placeholder="Alternate Contact">
+                        </div>
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pr-3">
+                            <label class="inline-block mb-2 text-slate-400" for="email">Email:</label>
+                            <input type="email" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="email" placeholder="Email">
+                        </div>
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pl-3">
+                            <label class="inline-block mb-2 text-slate-400" for="pno">Pin Code:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="pno" placeholder="Pin Code">
+                        </div>
+                        <div class="mb-4 md:w-full md:flex-auto">
+                            <label class="inline-block mb-2 text-slate-400" for="city">Town/City:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="city" placeholder="Town/City">
+                        </div>
+                    </div>
+                    <hr class="my-4 bg-gray-600">
+                    <h5 class="mb-4 text-xl font-medium text-black dark:text-gray-500">Security</h5>
+                    <div class="flex flex-wrap">
+                        <div class="mb-4 w-full md:flex-auto">
+                            <label class="inline-block mb-2 text-slate-400" for="uname">User Name:</label>
+                            <input type="text" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="uname" placeholder="User Name">
+                        </div>
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pr-3">
+                            <label class="inline-block mb-2 text-slate-400" for="pass">Password:</label>
+                            <input type="password" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="pass" placeholder="Password">
+                        </div>
+                        <div class="mb-4 w-full md:w-2/4 md:flex-auto md:pl-3">
+                            <label class="inline-block mb-2 text-slate-400" for="rpass">Repeat Password:</label>
+                            <input type="password" class="block w-full px-4 py-2 placeholder-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="rpass" placeholder="Repeat Password ">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="inline-block mb-2 text-gray-600">
+                        <input class="float-left w-4 h-4 mt-1 mr-2 bg-no-repeat border border-blue-500 rounded sbg-center dark:bg-dark-card dark:border-gray-600" type="checkbox" value="" id="flexCheckChecked">Enable Two-Factor-Authentication</label>
+                    </div>
+                    <button type="submit" class="inline-block p-2 px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-md hover:bg-blue-600 hover:text-white">Add New User</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{> partials/components/setting-button}}
+{{/content}}
+{{/extend}}

@@ -1,0 +1,52 @@
+{{#extend "layouts/dashboard/simple" title="maintenance" active="maintenance" path="../../" }}
+{{#content "scripts"}}
+<script src="{{path}}assets/js/plugins/countdown.js"></script>
+{{/content}}
+{{#content "content"}}
+<div class="w-full p-0 mx-auto">
+    <div class="fixed bottom-0 w-full text-center ">
+        <img src="{{path}}assets/images/error/01.png" class="inline-block h-auto mb-4 max-h-80" alt="">
+        <div class="w-full p-0 pb-0 text-center text-white">
+            <div class="h-80">
+                <div class="gradient-bottom">
+                    <div class="absolute left-0 right-0 z-50 bottom-10 mb-14">
+                        <h1 class="md:mb-2 mb-0 md:text-4xl text-3xl font-medium text-white">Hang on! We are under maintenance</h1>
+                        <p class="mb-4">It will not take a long time till we get the error fiked. We wii live again in</p>
+                        <ul class="flex items-center justify-center countdown list-inline" data-date="Aug 2022 20:20:22">
+                            <li><span data-days="">93</span>Days</li>
+                            <li><span data-hours="">10</span>Hours</li>
+                            <li><span data-minutes="">03</span>Minutes</li>
+                            <li><span data-seconds="">19</span>Seconds</li>
+                        </ul>
+                        <div class="w-1/2 mx-auto mt-2">
+                            <div><input type="email" class="w-4/5 px-2 py-2 border rounded-md form-control  mb-1 placeholder-slate-400" placeholder="Enter your mail">
+                                <a href="#" class="inline-flex justify-center px-6 py-2 text-center text-blue-500 transition-all duration-500 ease-in-out bg-white border rounded-md shadow-md hover:shadow-xl ">Notify Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-full c xl-circle" style="transform: translate(223px, -342px);">
+                        <div class="rounded-full c lg-circle">
+                            <div class="rounded-full c md-circle">
+                                <div class="rounded-full c sm-circle">
+                                    <div class="rounded-full c xs-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute top-0 left-0">
+        <svg width="280" height="230" viewBox="0 0 431 398" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.05">
+            <rect x="-157.085" y="193.773" width="543" height="77.5714" rx="38.7857" transform="rotate(-45 -157.085 193.773)" fill="#3B8AFF"></rect>
+            <rect x="7.46875" y="358.327" width="543" height="77.5714" rx="38.7857" transform="rotate(-45 7.46875 358.327)" fill="#3B8AFF"></rect>
+            <rect x="61.9355" y="138.545" width="310.286" height="77.5714" rx="38.7857" transform="rotate(45 61.9355 138.545)" fill="#3B8AFF"></rect>
+            <rect x="62.3154" y="-190.173" width="543" height="77.5714" rx="38.7857" transform="rotate(45 62.3154 -190.173)" fill="#3B8AFF"></rect>
+            </g>
+        </svg>
+    </div>
+</div>
+{{/content}}
+{{/extend}}

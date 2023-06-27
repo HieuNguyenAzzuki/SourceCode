@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@import "./custom.scss";
+@import "./prism";
+@import "./countdown";
+@import "./loader";
+@import "./responsive.scss";
+html {
+  scroll-behavior: smooth;
+}
+.sidebar{
+  @apply fixed top-0 bottom-0 z-40 block w-full;
+  max-width: 16.2rem;
+  // transition-all duration-500 ease-in-out
+  &+.main-content{
+    transition: all;
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+    margin-left: 16.2rem;
+  }
+    .sidebar-logo{
+      @apply m-0 mb-0 ml-4 text-2xl opacity-100;
+      transition: all;
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+
+    }
+    .sidebar-body{
+      @apply relative block h-fit pt-0 pr-4 overflow-scroll;
+      .iq-main-menu{
+        @apply flex flex-col pb-4 pl-0 mb-0;
+        .default-icon{
+          @apply font-medium ;
+        }
+        .mini-icon{
+           @apply hidden
+        }
+        .iq-sidebar{
+          @apply relative pl-4 mt-1;
+          .item-name{
+             @apply  flex-1 ml-4 text-base font-normal opacity-100 whitespace-nowrap;
+             
+          }
+        }
+        .nav-link{
+        @apply px-4 py-2 flex items-center rounded ;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199.98px){
+  .sidebar{
+    &+.main-content {
+      margin-left: 0;
+  }
+  .sidebar-toggle {
+    right: 18px;
+  }
+}
+.dual-compact{
+  &+.main-content {
+    margin-left: 0;
+}
+}
+}
+// dual-compact
+.dual-compact{
+  @apply fixed top-0 bottom-0 z-40 block w-full  bg-black ;
+  max-width: 100%;
+  &+.main-content{
+    margin-left: 16.2rem;
+  }
+}
+
+.dual-compact-mini{
+  @apply fixed top-0 bottom-0 z-40 block  bg-black ;
+  max-width: 4.8rem;
+  &+.main-content{
+    margin-left: 4.8rem;
+  }
+}
+
+// sidebar-mini class
+.sidebar-mini{
+  @apply fixed top-0 bottom-0 z-40 block ;
+  max-width: 4.8rem;
+  &+.main-content{
+    transition: all;
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+    margin-left: 4.8rem;
+  }
+  .sidebar-logo{
+    @apply hidden;
+    }
+    .sidebar-body{
+      @apply relative block h-fit pt-0 pr-4 px-4 overflow-scroll;
+      .iq-main-menu{
+        @apply flex flex-col items-center py-4 pl-0 mb-0;
+        .default-icon{
+           @apply hidden;
+        }
+        .mini-icon{
+          @apply block
+        }
+      .iq-sidebar{
+        @apply relative pl-0 mt-1;
+        .item-name{
+         @apply hidden;
+        }
+        .right-icon{
+          @apply hidden;
+        }
+      }
+    .nav-link{
+      @apply  p-3 flex rounded bg-blue-500 text-white shadow-lg ;
+    }
+  }
+}
+}
+
+@media (max-width: 1199.98px){
+.sidebar.sidebar-mini+.main-content {
+    margin-left: 0;
+}
+.sidebar.sidebar-mini{
+  transform: translateX(-150%);
+}
+.dual-compact.dual-compact-mini+.main-content {
+  margin-left: 0;
+}
+.dual-compact.dual-compact-mini{
+transform: translateX(-100%);
+}
+}
+
+// charts
+.d-activity{
+  min-height: 230px !important;
+}
+
+// Pricing page
+.type{
+  transform: translateX(-50%);
+}
+
+.active{
+  @apply bg-blue-500 text-white
+}
+
+.gradient{
+  @apply h-screen  items-center relative justify-center overflow-hidden m-auto flex;
+  background: radial-gradient(20% 60% at 50% 50%, #3B8AFF 0%, #0048b3 100%);
+  .c{
+    background: radial-gradient(60% 60% at 50% 50%, transparent 67%, rgba(0,0,0,0.470588) 100%);
+    padding: 9rem;
+    .xs-circle{
+     padding: 330px;
+    }
+  }
+}
+
+.gradient-bottom {
+  @apply items-center relative justify-center overflow-hidden m-auto flex h-96;
+  background: radial-gradient(20% 60% at 50% 50%, #3B8AFF 0%, #0048b3 100%);
+  .c{
+    background: radial-gradient(60% 60% at 50% 50%, transparent 67%, rgba(0,0,0,0.470588) 100%);
+    padding: 9rem;
+
+  .xl-circle{
+    transform: translate(223px, -342px);
+  }
+  .lg-circle{
+    transform: translate(84px, 26px);
+  }
+  .md-circle{
+  transform: translate(114px, 16px);
+}
+.sm-circle{
+  transform: translate(62px, 14px)
+}
+.xs-circle{
+  padding: 250px;
+  transform: translate(41px, 15px);
+}
+
+
+}
+}
+
+[dir="rtl"] {
+  .sidebar{
+    &+.main-content{
+      margin-right: 16.2rem;
+      margin-left: unset;
+    }
+ } 
+
+  .sidebar-mini + .main-content{
+    margin-left:unset;
+    margin-right: 4.8rem;
+  }
+  .LR{
+    direction: ltr;
+  }
+  .RL{
+    direction: rtl;
+  }
+  .right-0{
+    left: 0px;
+    right:unset;
+  }
+  .right-72{
+    left:18rem;
+    right:unset;
+  }
+  .right-4{
+    left: 1rem;
+    right:unset; 
+  }
+.sidearrow{
+  left: -1rem;
+    right:unset;
+}
+
+  .left-0{
+    right: 0rem;
+    left:unset;
+    }
+    
+  @media (max-width: 1199.98px)
+  {
+  .sidebar.sidebar-mini {
+    transform: translateX(0%);
+    display: none;
+  }
+  .sidebar + .main-content {
+    margin-right:0;
+    margin-left: unset;
+}
+  .sidebar-mini + .main-content {
+    margin-left: unset;
+    margin-right:0;
+  }
+}
+  .shadow-active{
+    .right-icon{
+      transform: rotate(-90deg) !important;
+    }
+  }
+  
+  .L{
+    left: 0rem !important;
+    right:unset !important;
+  }
+  .R{
+    right: 0rem !important;
+    } 
+
+}
+// leaflet responsive issue
+.leaflet-top,
+.leaflet-bottom {	
+	z-index: 0 !important;
+	}
+.leaflet-pane{
+ z-index: 0 !important;
+ }
+
+// Header image animation
+ .animated-scaleX {
+  animation: animScale 45s 1s ease-in-out infinite;
+}
+
+@keyframes animScale {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.175);}
+  100% {transform: scale(1);}
+}

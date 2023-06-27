@@ -1,0 +1,385 @@
+{{#extend layout title="datatable" active="datatable" path="../../" }}
+{{#content "content"}}
+<div class="flex flex-wrap">
+
+  <div class="flex-auto w-full">
+    <div class="flex flex-col mb-8 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-dark-card">
+      <div class="flex flex-wrap justify-between p-6 pb-0">
+        <div class="header-title">
+          <h4 class="mb-2 text-2xl font-medium card-title dark:text-gray-600">Tailwind Datatables</h4>
+        </div>
+      </div>
+      <div class="flex-auto p-6">
+        <p class="mb-4 text-gray-500 text-base">Images in Tailwind are made responsive with <span class="text-pink-500">.img-fluid. max-width: 100%;</span> and <span class="text-pink-500">height: auto;</span> are applied to the image so that it scales with the parent element.</p>
+        <div class="flex flex-wrap justify-between">
+          <div class="flex justify-center items-center">
+            <label class="inline-block text-gray-600" for="email">Show</label>
+            <div class="flex">
+              <select class="block w-full px-2 py-1 ml-2 rtl:mr-2 text-base font-normal bg-white border rounded-xl outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:text-gray-600 dark:border-gray-600" aria-label=".form-select-sm example">
+                <option selected="">10</option>
+                <option value="1">25</option>
+                <option value="2">50</option>
+                <option value="3">100</option>
+              </select>
+              <span class="text-gray-600 ml-1">entries</span>
+            </div>
+          </div>
+          <div class="flex justify-center items-center">
+            <label class="inline-block mb-2 text-gray-600 rtl:ml-2" for="email">Search:</label>
+            <input type="email" class="block w-full px-4 py-1 ml-2 text-base font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow dark:bg-dark-card dark:border-gray-600" id="email1">
+          </div>
+        </div>
+        <div class="mt-6 overflow-x-auto">
+          <table id="basic-table" class="min-w-full overflow-hidden">
+            <thead>
+              <tr class="bg-gray-100 dark:bg-dark-bg">
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">NAME</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">POSITION</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">OFFICE</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">AGE</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">START DATE</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">SALARY</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 dark:divide-gray-800">
+              <tr class="dark:bg-dark-strip">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Airi Satou</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Accountant</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Tokyo</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">33</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2008/11/28</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$162,700</h6>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-gray-100 dark:bg-dark-card">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Angelica Ramos</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Chief Executive Officer (CEO)</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">London</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">47</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2009/10/09</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$1,200,000</h6>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dark:bg-dark-strip">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Ashton Cox</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Junior Technical Author</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">San Francisco</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">66</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2009/01/12</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$86,000</h6>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-gray-100 dark:bg-dark-card">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Bradley Greer</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Software Engineer</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">London</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">41</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2012/10/13</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$132,000</h6>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dark:bg-dark-strip">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Brenden Wagner</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Software Engineer</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">San Francisco</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">28</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2011/06/07</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$206,850</h6>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-gray-100 dark:bg-dark-card">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Brielle Williamson</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Integration Specialist</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">New York</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">61</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2012/12/02</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$372,000</h6>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dark:bg-dark-strip">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Bruno Nash</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Software Engineer</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">London</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">38</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2011/05/03</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$163,500</h6>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-gray-100 dark:bg-dark-card">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Caesar Vance</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Pre-Sales Support</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">New York</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">21</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2011/12/12</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$106,450</h6>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dark:bg-dark-strip">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Cara Stevens</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Sales Assistant</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">New York</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">46</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2011/12/06</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$145,600</h6>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-gray-100 dark:bg-dark-card">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Cedric Kelly</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Senior Javascript Developer</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">Edinburgh</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">22</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">2012/03/29</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <h6 class="text-base dark:text-white">$433,060</h6>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="bg-white dark:bg-dark-strip ">
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">Name</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">Position</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">Office</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">Age</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">Start Date</th>
+                <th class="px-6 text-gray-500 py-4 whitespace-nowrap text-left">Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{{> partials/components/setting-button}}
+{{/content}}
+{{/extend}}

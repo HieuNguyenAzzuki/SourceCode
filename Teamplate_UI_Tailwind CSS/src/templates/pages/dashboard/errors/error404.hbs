@@ -1,0 +1,26 @@
+{{#extend "layouts/dashboard/simple" title="pages-error404" active="pages-error404" path="../../" }}
+{{#content "content"}}
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+<div class=" gradient">
+    <div class="container absolute flex flex-col items-center justify-center w-full max-w-screen-xl pl-4 pr-4 ml-auto mr-auto mt-20 font-medium text-center text-white md:top-40 top-4">
+        <img src="{{path}}assets/images/error/404.png" class="h-auto max-w-full mb-6 w-2/4" alt="">
+        <h2 class="mb-0 mt-6 text-white text-3xl font-medium">Oops! This Page is Not Found.</h2>
+        <p class="mt-2 text-white mb-4">The requested page dose not exist.</p>
+        <a class="px-6 py-2 text-center  transition-all duration-500 ease-in-out border  rounded shadow-md  bg-white text-blue-500 inline-flex items-center" href="../index.html">Back to Home</a>
+    </div>
+    <div class="box">
+        <div class="c rounded-full">
+            <div class="c rounded-full">
+                <div class="c rounded-full">
+                    <div class="c rounded-full">
+                        <div class="c rounded-full xs-circle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/content}}
+{{/extend}}

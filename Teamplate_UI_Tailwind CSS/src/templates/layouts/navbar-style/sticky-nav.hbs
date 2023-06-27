@@ -1,0 +1,41 @@
+{{!-- layouts/layout.hbs --}}
+<!doctype html>
+<html lang="en" class="" dir="{{#compare dir '==' 'true'}}rtl{{else}}ltr{{/compare}}">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>{{ appName }} | Responsive Tailwind Admin Dashboard Template</title>
+      {{> partials/dashboard/head }}
+      {{#block "head"}}
+        {{!-- External page head section--}}
+      {{/block}}
+  </head>
+  <body class="bg-body overflow-x-hidden dark:bg-dark-bg">
+    <!-- loader Start -->
+    <div id="loading">
+      {{> partials/dashboard/loader }}
+    </div>
+    <!-- loader END -->
+    <div>
+    {{> partials/dashboard/sidebar }}
+    <main class="main-content " x-data="{ data: true }">
+      <div class="relative">
+        <!--Nav Start-->
+        {{> partials/dashboard/sticky-header }}
+        <!--Nav End-->
+  
+      <div class="p-6 py-0 lg:p-10 lg:py-0 md:-mt-14 container-fluid">
+        {{#block "content"}}
+        {{/block}}
+      </div>
+      </div>
+      {{> partials/components/download-button}}
+      {{> partials/dashboard/footer }}
+    </main>
+
+    {{> partials/dashboard/scripts }}
+    {{#block "scripts"}}
+    {{/block}}
+    </div>
+  </body>
+</html>

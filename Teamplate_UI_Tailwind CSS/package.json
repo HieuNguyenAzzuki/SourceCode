@@ -1,0 +1,58 @@
+{
+  "name": "hope-ui",
+  "version": "2.0.1",
+  "description": "Tailwind Base Configration",
+  "main": "gulpfile.js",
+  "scripts": {
+    "watch": "gulp watch --output=dist-temp",
+    "build": "gulp build"
+  },
+  "keywords": [
+    "Tailwind",
+    "CSS",
+    "Script",
+    "HTML",
+    "Hope Ui"
+  ],
+  "author": "iqonic.design",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-nop": "0.0.3",
+    "gulp-npm-dist": "^1.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^1.4.0",
+    "gulp-wait": "0.0.2",
+    "handlebars": "^4.7.6",
+    "handlebars-layouts": "^3.1.4",
+    "yargs": "^16.0.3"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.10.1",
+    "apexcharts": "^3.29.0",
+    "counterup2": "^1.0.4",
+    "flatpickr": "^4.6.9",
+    "fslightbox": "^3.3.0-2",
+    "gulp-postcss": "^9.0.1",
+    "leaflet": "^1.7.1",
+    "node-sass": "^5.0.0",
+    "nouislider": "^14.7.0",
+    "postcss": "^8.2.9",
+    "smooth-scrollbar": "^8.6.2",
+    "sweetalert2": "^10.0.2",
+    "swiper": "^6.5.7",
+    "tailwindcss": "^3.0.11",
+    "waypoints": "^4.0.1"
+  }
+}

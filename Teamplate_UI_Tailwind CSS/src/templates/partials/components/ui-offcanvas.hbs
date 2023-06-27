@@ -1,0 +1,174 @@
+{{!-- list button --}}
+<div x-data="{ open: false }">
+    <button class="z-50 fixed left-0 top-40 bg-blue-500 p-1 border border-blue-500 rounded-r-xl xl:hidden"
+        @click="open = !open">
+        <svg class="text-white" width="20px" height="20px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z">
+            </path>
+        </svg>
+    </button>
+
+    {{!-- list button ends --}}
+    <div class="fixed w-full h-full left-0 z-50" x-show="open" style="display: none;">
+        <!-- bg open -->
+        <span class="fixed bg-gray-900 bg-opacity-70 w-full h-full inset-x-0 top-0"></span>
+
+        <!-- Mobile navbar -->
+        <nav class="left-0 w-72 fixed top-0 py-4 bg-[#ffffffd6] backdrop-blur-sm dark:bg-gray-800 h-full overflow-auto z-40"
+            x-show="open" @click.away="open=false" x-transition:enter="transform transition-transform duration-700"
+            x-transition:enter-start="-translate-x-full" x-transition:enter-end="-translate-x-0"
+            x-transition:leave="transform transition-transform duration-700" x-transition:leave-start="-translate-x-0"
+            x-transition:leave-end="-translate-x-full">
+
+
+            <div class="px-6 mb-0 xl:-mt-12 lg:overflow-hidden xl:block"
+                x-data="{selected:null, selected1:null, selected2:null}">
+                <h2 class="pb-2 text-lg font-medium text-black border-b h6 ">On this page</h2>
+                <a class="absolute mr-2 top-1 right-5 text-4xl text-black dark:text-white"
+                    @click="open = !open">&times;</a>
+                <nav class="text-sm ">
+                    <ul class="pl-0 mb-0 list-none">
+                        <li class="mt-2">
+                            <button
+                                class="flex items-center px-2 py-1 text-base font-semibold text-gray-600 transition-all rounded b-0 hover:bg-blue-100 hover:text-blue-500"
+                                @click="selected !== 1 ? selected = 1 : selected = null"
+                                x-bind:style="selected == 1 ? 'color: blue; background-color:#e7ebfc; border: 1px solid blue; box-shadow: 0 0.125rem 0.25rem 0rem rgb(58 87 232 / 1%);' : ''">
+                                <i class="transition-all duration-800 right-icon">
+                                    <svg class="inline-block w-6 h-6 text-gray-600"
+                                        x-bind:style="selected == 1 ? 'transform:  rotate(90deg)' : ''"
+                                        xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg></i>
+                                Components</button>
+                            <ul class="pl-4 mb-0 overflow-hidden list-none transition-all duration-800 max-h-0"
+                                x-ref="container1"
+                                x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                <li><a id=""
+                                        class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#accordian">Accordion</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#alert">Alerts</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#Badge">Badge</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500 "
+                                        href="#Breadcrumb">Breadcrumb</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#Button">Buttons</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#ButtonGroup">Button Group</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#calendar">Calendar</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#card">Card</a></li>
+                                <li><a active="Carousel"
+                                        class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#carousel">Carousel</a></li>
+
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#Dropdowns">Dropdowns</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#listgroup">List Group</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#Modal">Modal</a></li>
+
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#navbar">Navbar</a></li>
+
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#offcanvas">Offcanvas</a></li>
+
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#pagination">Pagination</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#popovers">Popovers</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#progress">Progress</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#scrollspy">Scrollspy</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#spinner">Spinners</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#toasts">Toasts</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#tooltips">Tooltips</a></li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            <button
+                                class="flex items-center px-2 py-1 text-base font-semibold text-gray-600 transition-all rounded b-0 hover:bg-blue-100 hover:text-blue-500"
+                                @click="selected1 !== 2 ? selected1 = 2 : selected1 = null"
+                                x-bind:style="selected1 == 2 ? 'color: blue; background-color:#e7ebfc; border: 1px solid blue; box-shadow: 0 0.125rem 0.25rem 0rem rgb(58 87 232 / 1%);' : ''">
+                                <i class="transition-all duration-800 right-icon">
+                                    <svg class="inline-block w-6 h-6 text-gray-600"
+                                        x-bind:style="selected1 == 2 ? 'transform:  rotate(90deg)' : ''"
+                                        xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </i>
+                                Forms</button>
+                            <ul class="pl-4 mb-0 overflow-hidden list-none transition-all duration-800 max-h-0"
+                                id="forms-collapse" style="" x-ref="container2"
+                                x-bind:style="selected1 == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#overview">Overview</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#disabled-forms">Disabled Forms</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#sizing">Sizing</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#input-group">Input Group</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#alertnate-group">Alertnate Group</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#floating-labels">Floating Labels</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#alertnate-float-label">Alertnate Float Label</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#validation">Validation</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            <button
+                                class="flex items-center px-2 py-1 text-base font-semibold text-gray-600 transition-all rounded b-0 hover:bg-blue-100 hover:text-blue-500"
+                                @click="selected2 !== 3 ? selected2 = 3 : selected2 = null"
+                                x-bind:style="selected2 == 3 ? 'color: blue; background-color:#e7ebfc; border: 1px solid blue; box-shadow: 0 0.125rem 0.25rem 0rem rgb(58 87 232 / 1%);' : ''">
+                                <i class="transition-all duration-800 right-icon">
+                                    <svg class="inline-block w-6 h-6 text-gray-600"
+                                        x-bind:style="selected2 == 3 ? 'transform:  rotate(90deg)' : ''"
+                                        xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </i>
+                                Contents</button>
+                            <ul class="pl-4 mb-0 overflow-hidden list-none transition-all duration-800 max-h-0"
+                                id="contents-collapse" style="" x-ref="container3"
+                                x-bind:style="selected2 == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#typography">Typography</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#images">Images</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#tables">Tables</a></li>
+                                <li><a class="text-gray-600 text-base py-1 px-2 mt-0.5 ml-1 rounded inline-flex items-center hover:bg-[#e7ebfc] hover:text-blue-500"
+                                        href="#figures">Figures</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+
+        </nav>
+
+    </div><!-- End Mobile menu -->
+
+</div>

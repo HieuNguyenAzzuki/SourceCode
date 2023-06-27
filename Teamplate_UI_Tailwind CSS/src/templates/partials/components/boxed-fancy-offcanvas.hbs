@@ -1,0 +1,29 @@
+<div class="xl:hidden block bg-white dark:bg-dark-card left-0" x-data="{ open: false }" x-bind:class="! open ? 'sidebar sidebar-mini' : 'sidebar-mini sidebar'">
+    
+    <div class="relative flex items-center justify-start mb-3 bg-white dark:bg-dark-card">
+        <a href="{{path}}dashboard/index.html" class="flex px-3 py-4 mr-4 text-xl">
+         <svg width="30" class="text-blue-500 rtl:ml-4" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="-0.757324" y="19.2427" width="28" height="4" rx="2" transform="rotate(-45 -0.757324 19.2427)" fill="currentColor"></rect>
+            <rect x="7.72803" y="27.728" width="28" height="4" rx="2" transform="rotate(-45 7.72803 27.728)" fill="currentColor"></rect>
+            <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)" fill="currentColor"></rect>
+            <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)" fill="currentColor"></rect>
+        </svg>
+            <h4 class="sidebar-logo dark:text-white ">{{ appName }}</h4>
+        </a>
+        <div class="absolute p-1 text-4xl xl:-right-3 right-4 top-1 rounded-2xl dark:text-white" x-on:click="open = ! open">
+            <i class="flex">
+                <a href="javascript:void(0)"
+                    onclick="leftoffCanvasclose()">&times;</a>
+            </i>
+        </div>
+    </div>
+    <div class="px-3 h-full dark:bg-dark-card">
+        <ul>
+            <li class="py-2 text-blue-500 dark:text-white"><a href="{{path}}dashboard/index-horizontal.html">Horizontal</li></a>
+            <li class="py-2 text-blue-500 dark:text-white"><a href="{{path}}dashboard/index-dual-horizontal.html">Dual Horizontal</li></a>
+            <li class="py-2 text-blue-500 dark:text-white"><a href="{{path}}dashboard/index-dual-compact.html">Dual Compact</li></a>
+            <li class="py-2 text-blue-500 dark:text-white"><a href="{{path}}dashboard/index-boxed.html">Boxed Horizontal</li></a>
+            <li class="py-2 text-blue-500 dark:text-white"><a href="{{path}}dashboard/index-boxed-fancy.html">Boxed Fancy</a></li>
+        </ul>
+    </div>
+</div>

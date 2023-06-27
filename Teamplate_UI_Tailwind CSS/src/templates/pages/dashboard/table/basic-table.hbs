@@ -1,0 +1,185 @@
+{{#extend layout title="basic-table" active="basic-table" path="../../" }}
+{{#content "content"}}
+<div class="flex flex-wrap">
+
+  <div class="flex-auto w-full">
+    <div class="flex flex-col mb-8 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-dark-card">
+      <div class="flex justify-between p-6 pb-0">
+          <h4 class="mb-2 text-2xl text-gray-800 font-medium dark:text-gray-600">Basic Table</h4>
+      </div>
+      <div class="flex-auto p-0">
+        <div class="mt-6 overflow-x-auto">
+          <table id="basic-table" class="min-w-full overflow-hidden dark:bg-dark-card">
+            <thead>
+              <tr class="bg-gray-100 border-none dark:bg-dark-bg">
+                <th class="px-6 text-gray-600 py-4 text-left font-semibold">COMPANIES</th>
+                <th class="px-6 text-gray-600 py-4 text-left font-semibold">MEMBERS</th>
+                <th class="px-6 text-gray-600 py-4 text-left font-semibold">BUDGET</th>
+                <th class="px-6 text-gray-600 py-4 text-left font-semibold">STATUS</th>
+                <th class="px-6 text-gray-600 py-4 text-left font-semibold">COMPLETION</th>
+              </tr>
+            </thead>
+            <tbody class= "divide-y divide-gray-200 dark:divide-gray-800 ">
+              <tr class="dark:bg-dark-strip">
+                <td class="px-6 py-4">
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900 rtl:ml-2" src="{{path}}assets/images/shapes/01.png" alt="profile">
+                    <h6 class="font-medium text-gray-800 dark:text-gray-600">Soft UI XD Version</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <a href="#" class="inline-flex ml-0">
+                      <div class="w-10 h-10 text-sm leading-10  text-center bg-white hover:z-10 text-blue-500 border-2 border-blue-500 rounded-full dark:bg-dark-card"> SP</div>
+                    </a>
+                    <a href="#" class="inline-flex -ml-5 rtl:-mr-5">
+                      <div class="w-10 h-10 text-sm leading-10 text-center bg-white hover:z-10  text-blue-500 border-2 border-blue-500 rounded-full dark:bg-dark-card"> PP</div>
+                    </a>
+                    <a href="#" class="inline-flex -ml-5">
+                      <div class="w-10 h-10 text-sm leading-10 text-center bg-white hover:z-10  text-blue-500 border-2 border-blue-500 rounded-full dark:bg-dark-card"> MM</div>
+                    </a>
+                </td>
+                <td class="px-6 py-4 dark:text-white">$14000</td>
+                <td class="px-6 py-4 text-cyan-500">Pending</td>
+                <td class="px-6 py-4">
+                  <h6 class="font-medium mb-2 dark:text-gray-600">60%</h6>
+                  <div class="bg-cyan-100 rounded-full shadow-inner h-1.5 dark:bg-cyan-700/40">
+                  <div class="w-3/5 h-1.5 bg-cyan-400 rounded-l-full"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-gray-50 dark:bg-dark-card">
+                <td class="px-6 py-4">
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900 rtl:ml-2" src="{{path}}assets/images/shapes/02.png" alt="profile">
+                    <h6 class="font-medium text-gray-800 dark:text-gray-600">Add Progress Track</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <a href="#" class="inline-flex ml-0">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> SP</div>
+                    </a>
+                    <a href="#" class="inline-flex -ml-5 rtl:-mr-5">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> PP</div>
+                    </a>
+                </td>
+                <td class="px-6 py-4 text-gray-600 dark:text-white">$3000</td>
+                <td class="px-6 py-4 text-red-500">Pending</td>
+                <td class="px-6 py-4">
+                    <h6 class="font-medium mb-2 dark:text-gray-600">10%</h6>
+                    <div class="bg-red-100 rounded-full shadow-inner h-1.5 dark:bg-red-700/40">
+                    <div class="w-4 h-1.5 bg-red-400 rounded-l-full "></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dark:bg-dark-strip">
+                <td class="px-6 py-4">
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900 rtl:ml-2" src="{{path}}assets/images/shapes/03.png" alt="profile">
+                    <h6 class="font-medium text-gray-800 dark:text-gray-600">Fix Platform Errors</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <a href="#" class="inline-flex ml-0">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> SP</div>
+                    </a>
+                    <a href="#" class="inline-flex -ml-5 rtl:-mr-5">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> PP</div>
+                    </a>
+                </td>
+                <td class="px-6 py-4 dark:text-white">Not set</td>
+                <td class="px-6 py-4 text-green-500">Completed</td>
+                <td class="px-6 py-4">
+                    <h6 class="font-medium mb-2 dark:text-gray-600">100%</h6>
+                  <div class="bg-gray-200 rounded-full shadow-inner h-1.5 dark:bg-green-700/40">
+                    <div class="w-full h-1.5 bg-green-500 rounded-full">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class=" bg-gray-50 dark:bg-dark-card">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900 rtl:ml-2" src="{{path}}assets/images/shapes/04.png" alt="profile">
+                    <h6 class="font-medium text-gray-800 dark:text-gray-600">Launch Our Mobile App</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <a href="#" class="inline-flex ml-0">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> SP</div>
+                    </a>
+                    <a href="#" class="inline-flex -ml-5 rtl:-mr-5">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> PP</div>
+                    </a>
+                    <a href="#" class="inline-flex -ml-5">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> AP</div>
+                    </a>
+                    <a href="#" class="inline-flex -ml-5">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> DP</div>
+                    </a>
+                </td>
+                <td class="px-6 py-4 text-gray-600 dark:text-white">$20500</td>
+                <td class="px-6 py-4 text-green-500">Completed</td>
+                <td class="px-6 py-4">
+                    <h6 class="font-medium mb-2 dark:text-gray-600">100%</h6>
+                    <div class="bg-gray-200 rounded-full shadow-inner h-1.5 dark:bg-green-700/40">
+                    <div class="w-full h-1.5 bg-green-500 rounded-full"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="dark:bg-dark-strip">
+                <td class="px-6 py-4">
+                  <div class="flex items-center whitespace-nowrap">
+                    <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900 rtl:ml-2"
+                      src="{{path}}assets/images/shapes/06.png" alt="profile">
+                    <h6 class="font-medium text-gray-800 dark:text-gray-600">Add the New Pricing Page</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <a href="#" class="inline-flex ml-0">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> SP</div>
+                    </a>
+                </td>
+                <td class="px-6 py-4 dark:text-white">$500</td>
+                <td class="px-6 py-4 text-blue-500 whitespace-nowrap">On Schedule</td>
+                <td class="px-6 py-4">
+                    <h6 class="font-medium mb-2 dark:text-gray-600">25%</h6>
+                    <div class="bg-blue-100 rounded-full shadow-inner h-1.5 dark:bg-blue-700/40">
+                    <div class="w-1/4 h-1.5 bg-blue-500 rounded-l-full"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-gray-50 dark:bg-dark-card">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900 rtl:ml-2" src="{{path}}assets/images/shapes/01.png" alt="profile">
+                    <h6 class="font-medium text-gray-800 dark:text-gray-600">Redesign New Online Shop</h6>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <a href="#" class="inline-flex ml-0">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> SP</div>
+                    </a>
+                    <a href="#" class="inline-flex -ml-5 rtl:-mr-5">
+                      <div class="w-10 h-10 text-sm leading-10 text-center text-blue-500 hover:z-10 bg-white border-2 border-blue-500 rounded-full dark:bg-dark-card"> PP</div>
+                    </a>
+                </td>
+                <td class="px-6 py-4 text-gray-600 dark:text-white">$2000</td>
+                <td class="px-6 py-4 text-orange-500">Completed</td>
+                <td class="px-6 py-4">
+                    <h6 class="font-medium mb-2 dark:text-gray-600">40%</h6>
+                    <div class="bg-orange-100 rounded-full shadow-inner h-1.5 dark:bg-orange-700/40">
+                    <div class="w-2/5 h-1.5 bg-orange-500 rounded-l-full"></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{{> partials/components/setting-button}}
+{{/content}}
+{{/extend}}

@@ -1,0 +1,71 @@
+<div x-data="{ open: false }">
+  <div class="relative flex items-center bg-gray-900">
+    <a href="{{path}}dashboard/index.html" class="flex px-5 py-4 text-xl ml-5">
+      <svg width="30" class="text-white mr-2 rtl:ml-2" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="-0.757324" y="19.2427" width="28" height="4" rx="2" transform="rotate(-45 -0.757324 19.2427)"
+          fill="currentColor"></rect>
+        <rect x="7.72803" y="27.728" width="28" height="4" rx="2" transform="rotate(-45 7.72803 27.728)"
+          fill="currentColor"></rect>
+        <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)"
+          fill="currentColor"></rect>
+        <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)"
+          fill="currentColor"></rect>
+      </svg>
+      <h4 class="text-gray-300 ml-2 text-xl font-semibold">{{ appName }}</h4>
+    </a>
+    <button type="button" class="absolute right-4 text-gray-500"
+      @click="open = !open" x-bind:aria-expanded="open.toString()">
+      <span class="sr-only">Mobile menu</span>
+      <svg x-description="Icon open" x-state:on="Menu open" x-state:off="Menu closed" class="hidden w-8 h-8"
+        :class="{ 'block': open, 'hidden': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+
+      <svg x-description="Icon open" x-state:on="Menu open" x-state:off="Menu closed" class="block w-8 h-8"
+        :class="{ 'hidden': open, 'block': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+
+
+  <!-- Offcanvas button trigger -->
+
+
+  <!-- Right Offcanvas -->
+  <div class="fixed w-full h-full inset-0 z-50 " x-description="Mobile menu" x-show="open"
+    style="display: none;">
+    <!-- bg open -->
+    {{!-- <span class="fixed bg-gray-900 bg-opacity-70 w-full h-full inset-x-0 top-0"></span> --}}
+
+    <!-- Mobile navbar -->
+    <nav
+      class="flex flex-col right-0 w-full fixed top-16 py-4 bg-gray-900 dark:bg-gray-900 h-full overflow-auto z-40"
+      x-show="open" @click.away="open=false" x-description="Mobile menu" role="menu"
+      x-transition:enter="transform transition-transform duration-700"
+      x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+      x-transition:leave="transform transition-transform duration-700" x-transition:leave-start="translate-x-0"
+      x-transition:leave-end="translate-x-full">
+
+      <div class="px-3">
+        <ul class="w-full text-white text-center">
+          <li class="px-2 py-2 font-semibold" href="{{path}}dashboard">Dashboard</li>
+          <li class="p-2 text-gray-500 font-semibold" href="#">Notification</li>
+          <li class="p-2 text-gray-500 font-semibold" href="#">Profile</li>
+          <li class="p-2 text-gray-500 font-semibold" href="#">Setting</li>
+          <li class="flex ml-5">
+            <input type="text"
+              class="block w-full text-gray-800 px-4 py-2 text-base border border-collapse rounded outline-none focus:border-blue-400 dark:bg-dark-card focus:shadow-lg dark:border-gray-700 placeholder-slate-400"
+              placeholder='Search...'>
+            <button
+              class="inline-block px-4 py-2 ml-2 rtl:mr-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md lg:px-6 hover:shadow-xl hover:bg-blue-600 hover:text-white ">Search</button>
+        </ul>
+      </div>
+
+    </nav>
+  </div><!-- End Mobile menu -->
+</div>
+       

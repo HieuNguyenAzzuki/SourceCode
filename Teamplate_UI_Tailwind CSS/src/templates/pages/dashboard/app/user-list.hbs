@@ -1,0 +1,452 @@
+{{#extend layout title="user-list" active="user-list" path="../../" }}
+{{#content "content"}}
+<div class="flex flex-wrap">
+    <div class="flex-auto w-full">
+        <div class="relative flex flex-col mb-8 text-gray-600 bg-white shadow-lg rounded-xl dark:bg-dark-card">
+            <div class="flex justify-between flex-auto p-6 pb-0">
+                <h4 class="text-2xl font-medium text-black dark:text-gray-500">User List</h4>
+            </div>
+            <div class="pb-6 pt-2 px-0">
+                <div class="overflow-x-auto">
+                    <div class="flex flex-wrap items-center">
+                        <div class="md:w-2/4 pt-4">
+                            <div class="pl-6">
+                                <label>Show
+                                    <select class="inline-block outline-none py-1 pl-4 pr-0 text-sm border bg-white rounded-lg dark:bg-dark-card dark:border-gray-600 ">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select> entries</label>
+                            </div>
+                        </div>
+                        <div class="pr-6 pl-6 lg:pl-0 lg:block flex text-right md:w-2/4 pt-4">
+                            <label>Search:</label>
+                            <input type="search" class="py-1 ml-2 border outline-none rounded-md focus:border-blue-400 focus:shadow hover:border-blue-500 dark:bg-dark-card dark:border-gray-600">
+                        </div>
+                    </div>
+                    <div class="mt-6 overflow-x-auto">
+                        <table class="min-w-full overflow-hidden divide-y divide-gray-200 dark:divide-gray-800">
+                            <thead>
+                                <tr class="bg-gray-100 dark:bg-dark-bg">
+                                    <th class="px-6 py-4 text-left text-slate-400 font-medium uppercase">Profile</th>
+                                    <th class="px-6 py-4 text-left text-slate-400 font-medium uppercase">Name</th>
+                                    <th class="px-6 py-4 text-left text-slate-400 font-medium uppercase">Contact</th>
+                                    <th class="px-6 py-4 text-left text-slate-400 font-medium uppercase">Email</th>
+                                    <th class="px-6 py-4 text-left text-slate-400 font-medium uppercase"> Country</th>
+                                    <th class="px-6 py-4 text-left text-slate-400 font-medium uppercase">Status</th>
+                                    <th class="px-6 py-4 text-left text-slate-400 font-medium uppercase">Company</th>
+                                    <th class="px-6 py-4 text-left text-slate-400 font-medium uppercase">Join Date</th>
+                                    <th class="px-6 py-4 text-left text-slate-400 font-medium uppercase">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 dark:divide-gray-800">
+                                <tr class="dark:bg-dark-card">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900" src="{{path}}assets/images/shapes/01.png" alt="profile">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Anna Sthesia</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">(760) 756 7568</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">annasthesia@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">USA</td>
+                                    <td class="px-6 py-4"><span class="inline-block whitespace-nowrap px-2 py-0.5 text-xs text-center font-bold leading-none text-white bg-blue-500 rounded">Active</span></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Acme Corporation</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">2019/12/01</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center list-user-action">
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-green-500 border border-green-500 rounded-lg " href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 ml-1 mr-1 text-sm  text-center text-white bg-orange-500 border border-orange-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-red-500 border border-red-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="dark:bg-dark-strip">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900" src="{{path}}assets/images/shapes/02.png" alt="profile">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">Brock Lee</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">+62 5689 458 658</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">brocklee@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">Indonesia</td>
+                                    <td class="px-6 py-4 whitespace-nowrap"><span class="inline-block whitespace-nowrap px-2 py-0.5 text-xs text-center font-bold leading-none text-white bg-blue-500 rounded">Active</span></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">Soylent Corp</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">2019/12/01</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center list-user-action">
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-green-500 border border-green-500 rounded-lg " href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 ml-1 mr-1 text-sm  text-center text-white bg-orange-500 border border-orange-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-red-500 border border-red-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="dark:bg-dark-card">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900" src="{{path}}assets/images/shapes/03.png" alt="profile">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Dan Druff</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">+55 6523 456 856</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">dandruff@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Brazil</td>
+                                    <td class="px-6 py-4 whitespace-nowrap "><span class="inline-block whitespace-nowrap px-2 py-0.5 text-xs text-center font-bold leading-none text-white bg-orange-500 rounded">Pending</span></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Umbrella Corporation</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">2019/12/01</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center list-user-action">
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-green-500 border border-green-500 rounded-lg " href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 ml-1 mr-1 text-sm  text-center text-white bg-orange-500 border-orange-500 border rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-red-500 border-red-500 border rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="dark:bg-dark-strip">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900" src="{{path}}assets/images/shapes/04.png" alt="profile">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">Hans Olo</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">+91 2586 253 125</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">hansolo@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">India</td>
+                                    <td class="px-6 py-4 whitespace-nowrap"><span class="inline-block whitespace-nowrap px-2 py-0.5 text-xs text-center font-bold leading-none text-white bg-red-500 rounded">Inactive</span></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">Vehement Capital</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">2019/12/01</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center list-user-action">
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-green-500 border border-green-500 rounded-lg " href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 ml-1 mr-1 text-sm  text-center text-white bg-orange-500 border-orange-500 border rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-red-500 border border-red-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="dark:bg-dark-card">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl  dark:bg-indigo-900" src="{{path}}assets/images/shapes/05.png" alt="profile">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Lynn Guini</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">+27 2563 456 589</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">lynnguini@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Africa</td>
+                                    <td class="px-6 py-4 whitespace-nowrap"><span class="inline-block whitespace-nowrap px-2 py-0.5 text-xs text-center font-bold leading-none text-white bg-blue-500 rounded">Active</span></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Massive Dynamic</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">2019/12/01</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center list-user-action">
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-green-500 border border-green-500 rounded-lg" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 ml-1 mr-1 text-sm  text-center text-white bg-orange-500 border border-orange-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-red-500 border border-red-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="dark:bg-dark-strip">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900" src="{{path}}assets/images/shapes/06.png" alt="profile">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">Eric Shun</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">+55 25685 256 589</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold" >ericshun@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">Brazil</td>
+                                    <td class="px-6 py-4 whitespace-nowrap"><span class="inline-block whitespace-nowrap px-2 py-0.5 text-xs text-center font-bold leading-none text-white bg-orange-500 rounded">Pending</span></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">Globex Corporation</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-400 dark:text-gray-400 font-semibold">2019/12/01</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center list-user-action">
+                                            <a class="inline-block p-1 text-sm text-center text-white bg-green-500 border border-green-500 rounded-lg" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 ml-1 mr-1 text-sm  text-center text-white bg-orange-500 border border-orange-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-red-500 border border-red-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="dark:bg-dark-card">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900" src="{{path}}assets/images/shapes/03.png" alt="profile">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">aaronottix</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">(760) 765 2658</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">budwiser@ymail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">USA</td>
+                                    <td class="px-6 py-4 whitespace-nowrap"><span class="inline-block whitespace-nowrap px-2 py-0.5 text-xs text-center font-bold leading-none text-white bg-cyan-500 rounded">Hold</span></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Acme Corporation</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">2019/12/01</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center list-user-action">
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-green-500 border border-green-500 rounded-lg " href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 ml-1 mr-1 text-sm  text-center text-white bg-orange-500 border border-orange-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-red-500 border border-red-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="dark:bg-dark-strip">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900" src="{{path}}assets/images/shapes/05.png" alt="profile">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-500 dark:text-gray-400 font-semibold">Marge Arita</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-500 dark:text-gray-400 font-semibold">+27 5625 456 589</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-500 dark:text-gray-400 font-semibold">margearita@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-500 dark:text-gray-400 font-semibold">Africa</td>
+                                    <td class="px-6 py-4 whitespace-nowrap"><span class="inline-block whitespace-nowrap px-2 py-0.5 text-xs text-center font-bold leading-none text-white bg-green-500 rounded">Complete</span></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-500 dark:text-gray-400 font-semibold">Vehement Capital</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-500 dark:text-gray-400 font-semibold">2019/12/01</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center list-user-action">
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-green-500 border border-green-500 rounded-lg " href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 ml-1 mr-1 text-sm  text-center text-white bg-orange-500 border-orange-500 border rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-red-500 border border-red-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="dark:bg-dark-card">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <img class="w-10 h-10 p-1 mr-3 text-blue-400 bg-blue-100 rounded-xl dark:bg-indigo-900" src="{{path}}assets/images/shapes/02.png" alt="profile">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Bill Dabear</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">+55 2563 456 589</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">billdabear@gmail.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-semibold">Brazil</td>
+                                    <td class="px-6 py-4 whitespace-nowrap"><span class="inline-block whitespace-nowrap px-2 py-0.5 text-xs text-center font-bold leading-none text-white bg-blue-500 rounded">Active</span></td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-bsemibold">Massive Dynamic</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-400 font-bsemibold">2019/12/01</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center list-user-action">
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-green-500 border border-green-500 rounded-lg " href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 ml-1 mr-1 text-sm  text-center text-white bg-orange-500 border border-orange-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a class="inline-block p-1 text-sm  text-center text-white bg-red-500 border border-red-500 rounded-lg" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete" href="#">
+                                                <span>
+                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{> partials/components/setting-button}}
+{{/content}}
+{{/extend}}
